@@ -36,3 +36,11 @@ This project analyzes sentiment of YouTube comments using YouTube API, MongoDB A
 5. **Run the scripts in order** - First `python YouTube.py` to collect comments, then run `youtube_sentiment_analysis.ipynb` in Colab to process data with Spark, finally `python classification_person4.py` to train model and generate visualizations
 
 ## Repository Structure
+
+```
+youtube-sentiment-analysis/
+├── YouTube.py                          # Data collection (Person 2)
+├── youtube_sentiment_analysis.ipynb    # Spark processing (Person 3)
+├── classification_person4.py           # Model training (Person 4)
+└── README.md                           # This file
+```
