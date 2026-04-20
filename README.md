@@ -1,25 +1,15 @@
 # YouTube Comment Sentiment Analysis
 
-This project analyzes sentiment of YouTube comments using:
-- YouTube API
-- MongoDB Atlas
-- Apache Spark
-- Logistic Regression
+This project analyzes sentiment of YouTube comments using YouTube API, MongoDB Atlas, Apache Spark, and Logistic Regression.
 
 ## Team Members
 
-| Name | Role | Code File |
-|------|------|------------|
-| Tan Guangxi | Data Collection | `YouTube.py` |
-| Qi Yinxuan | Classification & Visualization | `classification_person4.py` |
-| Wang Qixu | Data Processing (Spark + MongoDB) | `youtube_sentiment_analysis.ipynb` |
-
-## Project Overview
-
-1. **Data Collection** - Collect comments from YouTube videos using YouTube API v3
-2. **Data Processing** - Clean text, tokenize, remove stopwords, extract features using Spark
-3. **Classification** - Train Logistic Regression model for sentiment analysis (Positive/Negative)
-4. **Visualization** - Confusion matrix, sentiment distribution, word cloud
+| Name | Role | Responsibilities | Code File |
+|------|------|------------------|-----------|
+| Tan Guangxi | Data Collection | YouTube API comment crawling | `YouTube.py` |
+| Wang Qixu | Data Processing | Spark data cleaning, tokenization, feature extraction | `youtube_sentiment_analysis.ipynb` |
+| Qi Yinxuan | Classification & Visualization | Model training, confusion matrix, word cloud | `classification_person4.py` |
+| Huang Ziyuan | System Design & Quotation | System architecture diagram, hardware/software quotation | (no code) |
 
 ## Data Source
 
@@ -36,5 +26,7 @@ This project analyzes sentiment of YouTube comments using:
 ## How to Run
 
 1. Clone this repository
-2. Install required packages: `pip install pymongo pyspark sklearn wordcloud textblob`
-3. Run the notebooks/scripts in order
+2. Install required packages: `pip install pymongo pyspark scikit-learn wordcloud textblob google-api-python-client matplotlib seaborn pandas`
+3. Set up MongoDB Atlas and update CONNECTION_STRING in the code
+4. Get YouTube API key and update API_KEY in YouTube.py
+5. Run the scripts in order: YouTube.py -> youtube_sentiment_analysis.ipynb -> classification_person4.py
