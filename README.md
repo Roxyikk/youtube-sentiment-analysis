@@ -25,8 +25,14 @@ This project analyzes sentiment of YouTube comments using YouTube API, MongoDB A
 
 ## How to Run
 
-1. Clone this repository
-2. Install required packages: `pip install pymongo pyspark scikit-learn wordcloud textblob google-api-python-client matplotlib seaborn pandas`
-3. Set up MongoDB Atlas and update CONNECTION_STRING in the code
-4. Get YouTube API key and update API_KEY in YouTube.py
-5. Run the scripts in order: YouTube.py -> youtube_sentiment_analysis.ipynb -> classification_person4.py
+1. **Clone this repository** - Run `git clone https://github.com/Roxyikk/youtube-sentiment-analysis.git` and `cd youtube-sentiment-analysis`
+
+2. **Install required packages** - Run `pip install pymongo pyspark scikit-learn wordcloud textblob google-api-python-client matplotlib seaborn pandas`
+
+3. **Set up MongoDB Atlas** - Create a free cluster at mongodb.com/atlas, get your connection string, and update `CONNECTION_STRING` in the code
+
+4. **Get YouTube API key** - Enable YouTube Data API v3 in Google Cloud Console, create an API key, and update `YOUR_API_KEY` in `YouTube.py`
+
+5. **Run the scripts in order** - First `python YouTube.py` to collect comments, then run `youtube_sentiment_analysis.ipynb` in Colab to process data with Spark, finally `python classification_person4.py` to train model and generate visualizations
+
+## Repository Structure
